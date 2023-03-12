@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cssBayan</title>
+    <style>
+    body {
+        background-color: bisque;
+    }
+    .main{
+        margin: 150px 100px 50px 100px; 
+    }
+    .header {
+        font-size: 50px;
+        font-weight: bold;
+    }
+    .br {
+        border-bottom: solid;
+        border-color: black;
+        margin-top: 40px;
+    }
+    .img {
+        width: 100%;
+        height: 100%;
+    }
+    .normal {
+        position: relative;
+        font-weight: 600;
+        box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, .08);
+        color: #1c1c6b;
+        display: block;
+        margin-bottom: 10px;
+        cursor: pointer;
+        padding: 15px ;
+        border-radius: 4px;
+        z-index: 1;
+    }
+    
+    .togCheck {
+         display: none; 
+    }
+    .togContent {
+   max-height: 0;
+   opacity: 0;
+   visibility: hidden;
+   transition: max-height 1s;
+    }
+    .togCheck:checked + .togContent {
+  max-height: 100vh; 
+  opacity: 1;
+  visibility: visible;
+    }
+* {
+  font-family: arial, sans-serif;
+  box-sizing: border-box;
+}
+.togButton {
+    margin: right 0;  ;
+    display: block;
+    width: 100%;
+    padding: 50px;
+    cursor: pointer;
+}
+.togButton:after {
+    content: "";
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    width: 50px;
+    height: 50px;
+    background: url(chevron-right.png);
+    transition: all 0.3s ease;
+}
+.togButton input:checked + label {
+    transform: rotate(90deg);
+}
+.togContent { background: #f4f6ff; }
+.togContent p {
+  padding: 50px 10px;
+  margin: 0;
+}
+   </style>
+</head>
+<body> 
+    <div class="main">
+        <div class="header">css Bayan</div>
+        <div class="br"></div>  
+        <label for="check" class="togButton normal">You can't just copy and paste CSS</label>
+        <input type="checkbox" class="togCheck" id="check"/>
+        <div class="togContent">
+            <img class="img " src="dog meme.jpg">
+        </div>  
+        
+        <div class="br"></div>
+        <label for="check1" class="togButton normal">Keep calm and carry on</label>
+        <input type="checkbox" class="togCheck" id="check1"/>
+        <div class="togContent">
+            <img class="img" src="keepCalm.jpg">
+        </div> 
+
+        <div class="br"></div>
+        <label for="check2" class="togButton normal">Work-life balance</label>
+        <input type="checkbox" class="togCheck" id="check2"/>
+        <div class="togContent">
+            <img class="img" src="shrek.jpg">
+        </div> 
+
+        <div class="br"></div>
+        <label for="check3" class="togButton normal">Dude, where is JS</label>
+        <input type="checkbox" class="togCheck" id="check3"/>
+        <div class="togContent">
+            <img class="img" src="shrek1.jpg">
+        </div> 
+
+        <div class="br"></div>
+        <label for="check4" class="togButton normal">Relax and take it easy</label>
+        <input type="checkbox" class="togCheck" id="check4"/>
+        <div class="togContent">
+            <img class="img" src="pig.jpg">
+        </div> 
+    </div>
+      
+</body>
+</html>
